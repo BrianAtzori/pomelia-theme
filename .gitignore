@@ -19,6 +19,7 @@ wp-config.php
 
 # Example themes
 /wp-content/themes/twenty*/
+/theme-origin
 
 # Example plugin
 /wp-content/plugins/hello.php
