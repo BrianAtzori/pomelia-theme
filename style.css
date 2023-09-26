@@ -9,7 +9,6 @@ License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
-Ciao
 */
 
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,400italic,600");
@@ -181,7 +180,7 @@ html {
 
 body {
   background: #f0f4f4;
-  color: #5b5b5b;
+  color: #FDAEA5;
   font-size: 15pt;
   line-height: 1.85em;
   font-family: "Source Sans Pro", sans-serif;
@@ -217,7 +216,7 @@ h4,
 h5,
 h6 {
   font-weight: 400;
-  color: #483949;
+  color: #B46A70;
   line-height: 1.25em;
 }
 
@@ -257,7 +256,7 @@ h4 {
 strong,
 b {
   font-weight: 400;
-  color: #483949;
+  color: #B46A70;
 }
 
 em,
@@ -280,7 +279,7 @@ a {
 }
 
 a:hover {
-  color: #ef8376;
+  color: #FDAEA5;
   border-bottom-color: transparent;
 }
 
@@ -2050,7 +2049,7 @@ ul.icons li a {
 }
 
 ul.icons li a:hover {
-  color: #ef8376;
+  color: #FDAEA5;
 }
 
 /* Form */
@@ -2058,7 +2057,7 @@ ul.icons li a:hover {
 form label {
   display: block;
   font-weight: 400;
-  color: #483949;
+  color: #B46A70;
   margin: 0 0 1em 0;
 }
 
@@ -2090,7 +2089,7 @@ form input[type="password"]:focus,
 form select:focus,
 form textarea:focus {
   background: #fff;
-  border-color: #df7366;
+  border-color: #FDAEA5;
 }
 
 form input[type="text"],
@@ -2173,7 +2172,7 @@ button,
 .button {
   position: relative;
   display: inline-block;
-  background: #df7366;
+  background: #FDAEA5;
   color: #fff;
   text-align: center;
   border-radius: 0.5em;
