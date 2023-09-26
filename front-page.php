@@ -32,7 +32,7 @@ get_header()
 </div>
 
 <!-- Banner -->
-<section id="banner">
+<!-- <section id="banner">
     <header>
         <h2>Hi. You're looking at <strong>Helios</strong>.</h2>
         <p>
@@ -40,7 +40,23 @@ get_header()
             Built with HTML5/CSS3 and released under the <a href="http://html5up.net/license">CCA</a> license.
         </p>
     </header>
-</section>
+</section> -->
+
+<!-- Main -->
+<div class="wrapper style2">
+
+    <article id="main" class="container special">
+        <?php
+        if (have_posts()) {
+            while (have_posts()) {
+                the_post();
+                the_content();
+            }
+        }
+        ?>
+    </article>
+
+</div>
 
 <!-- Carousel -->
 <section class="carousel">
@@ -128,35 +144,6 @@ get_header()
 
     </div>
 </section>
-
-<!-- Main -->
-<div class="wrapper style2">
-
-    <article id="main" class="container special">
-        <a href="#" class="image featured"><img src="images/pic06.jpg" alt="" /></a>
-        <header>
-            <h2><a href="#">Sed massa imperdiet magnis</a></h2>
-            <p>
-                Sociis aenean eu aenean mollis mollis facilisis primis ornare penatibus aenean. Cursus ac enim
-                pulvinar curabitur morbi convallis. Lectus malesuada sed fermentum dolore amet.
-            </p>
-        </header>
-        <p>
-            Commodo id natoque malesuada sollicitudin elit suscipit. Curae suspendisse mauris posuere accumsan massa
-            posuere lacus convallis tellus interdum. Amet nullam fringilla nibh nulla convallis ut venenatis purus
-            sit arcu sociis. Nunc fermentum adipiscing tempor cursus nascetur adipiscing adipiscing. Primis aliquam
-            mus lacinia lobortis phasellus suscipit. Fermentum lobortis non tristique ante proin sociis accumsan
-            lobortis. Auctor etiam porttitor phasellus tempus cubilia ultrices tempor sagittis. Nisl fermentum
-            consequat integer interdum integer purus sapien. Nibh eleifend nulla nascetur pharetra commodo mi augue
-            interdum tellus. Ornare cursus augue feugiat sodales velit lorem. Semper elementum ullamcorper lacinia
-            natoque aenean scelerisque.
-        </p>
-        <footer>
-            <a href="#" class="button">Continue Reading</a>
-        </footer>
-    </article>
-
-</div>
 
 <!-- Features -->
 <div class="wrapper style1">
