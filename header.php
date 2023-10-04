@@ -11,21 +11,38 @@
     <?php wp_head() ?>
 </head>
 
-<body class="homepage is-preload">
-    <div id="page-wrapper">
+<body>
 
-        <!-- Header -->
-        <div id="header">
+    <nav>
+        <div class="logo-container">
+            <?php
+            if (function_exists('the_custom_logo')) {
+                $custom_logo_id = get_theme_mod('custom_logo');
+                $image = wp_get_attachment_image_src($custom_logo_id, 'full');
+            }
+            ?>
+            <img class="site-logo" src="<?php echo $image[0] ?>" />
+        </div>
+        <div class="menu-icon" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <ul id="menu" class="hidden">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
 
-
-            <!-- Inner -->
-            <div class="inner">
-                <header>
-                    <h1><a href="index.html" id="logo"><?php echo get_bloginfo('name') ?></a></h1>
-                    <hr />
-                    <p><?php echo get_bloginfo('description') ?></p>
-                </header>
-                <footer>
-                    <a href="#banner" class="button circled scrolly">Scopri</a>
-                </footer>
-            </div>
+    <section class="hero">
+        <h1>
+            <?php echo get_bloginfo('name') ?>
+        </h1>
+        <h2>
+            <?php echo get_bloginfo('description') ?>
+        </h2>
+        <button>Scopri di più</button>
+    </section>
