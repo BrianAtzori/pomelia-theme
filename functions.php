@@ -17,7 +17,7 @@ add_action('after_setup_theme', 'forHotelsFirstSetup');
 
 function forHotelsRegisterStyle()
 {
-    wp_enqueue_style('for-hotels-style', get_template_directory_uri() . "/style.css", array(), '1.0', 'all'); 
+    wp_enqueue_style('for-hotels-style', get_template_directory_uri() . "/style.css", array(), '1.0', 'all');
 }
 
 add_action('wp_enqueue_scripts', 'forHotelsRegisterStyle');
@@ -28,5 +28,22 @@ function forHotelsRegisterScripts()
 }
 
 add_action('wp_enqueue_scripts', 'forHotelsRegisterScripts');
+
+function forHotelsRegisterWidgets()
+{
+    register_sidebar(
+        array(
+            'before_title' => '<h2>',
+            'after_title' => '</h2>',
+            'before_widget' => '<ul class="social-list list-inline py-3 mx-auto">',
+            'after_widget' => '</ul>',
+            'name' => 'Footer Area',
+            'id' => 'footer-1',
+            'description' => ' Footer Widget Area'
+        )
+    );
+}
+
+add_action('widgets_init', 'forHotelsRegisterWidgets');
 
 ?>
