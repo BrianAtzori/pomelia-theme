@@ -82,16 +82,40 @@ nav a {
 
 /* HERO */
 
-.hero{
-  background-color: red;
+.hero {
   width: 100%;
-  height: fit-content;
+  min-height: 100vh;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   flex-direction: column;
   text-align: center;
+  gap: 20px;
 }
 
+.hero-content{
+  backdrop-filter: blur(20px);
+  color: whitesmoke;
+  padding: 20px;
+  font-size: x-large;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 10px;
+  text-shadow: 2px 2px 5px #333;
+}
+
+.cta-button {
+  border: none;
+  font-weight: bold;
+  color: whitesmoke;
+  width: 60vw;
+  align-self: center;
+  padding: 20px;
+  background-color: #c07f85;
+  border-radius: 0px 60px 60px 0;
+  font-size: medium;
+}
 
 @media screen and (max-width: 768px) {
 }
@@ -129,6 +153,9 @@ nav a {
     border-radius: 100%;
     height: fit-content;
   }
+  .cta-button {
+    width: 30vw;
+  }
 }
 
 /* Desktop Styles */
@@ -139,6 +166,9 @@ nav a {
     border-radius: 100%;
     height: fit-content;
   }
+  .cta-button {
+    width: 20vw;
+  }
 }
 
 @media only screen and (min-width: 1440px) {
@@ -148,6 +178,11 @@ nav a {
     border-radius: 100%;
     height: fit-content;
   }
+
+  .cta-button {
+    width: 15vw;
+  }
+
 }
 
 /* 4K */
