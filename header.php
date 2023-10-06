@@ -28,33 +28,14 @@
             <div class="bar"></div>
             <div class="bar"></div>
         </div>
-        <ul id="menu" class="hidden">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
+        <?php
+        wp_nav_menu(
+            array(
+                'menu' => 'primary',
+                'container' => '',
+                'theme_location' => 'primary',
+                'items_wrap' => '<ul id="menu" class="hidden"> <li class="nav-item active">%3$s </li> </ul>'
+            )
+        )
+            ?>
     </nav>
-
-    <?php
-    if (has_post_thumbnail()) {
-        $post_thumbnail_id = get_post_thumbnail_id($post);
-        $featured_image = wp_get_attachment_image_src($post_thumbnail_id, 'full');
-    }
-    ?>
-
-    <section class="hero"
-        style="background: url('<?php echo $featured_image[0]; ?>') no-repeat center center fixed; background-size:cover;">
-        <div class="hero-content">
-            <h1>
-                <?php echo get_bloginfo('name') ?>
-            </h1>
-            <p>
-                <?php echo get_bloginfo('description') ?>
-            </p>
-        </div>
-
-        <button class="cta-button">Scopri di più</button>
-
-    </section>

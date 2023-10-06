@@ -71,4 +71,16 @@ function forHotelsRegisterWidgets()
 
 add_action('widgets_init', 'forHotelsRegisterWidgets');
 
+function forHotelsRegisterMenu()
+{
+
+    $locations = array(
+        'primary' => "Primary Menu",
+    );
+
+    register_nav_menus($locations);
+}
+
+add_action('init', 'forHotelsRegisterMenu');
+
 ?>
