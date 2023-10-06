@@ -35,12 +35,37 @@ function forHotelsRegisterWidgets()
         array(
             'before_title' => '<h2>',
             'after_title' => '</h2>',
-            'before_widget' => '<ul class="social-list list-inline py-3 mx-auto">',
-            'after_widget' => '</ul>',
-            'name' => 'Footer Area',
+            'before_widget' => '<div class="first-footer-widget">',
+            'after_widget' => '</div>',
+            'name' => 'First Footer Area',
             'id' => 'footer-1',
-            'description' => ' Footer Widget Area'
+            'description' => ' First Footer Widget Area'
         )
+    );
+
+    register_sidebar(
+        array(
+            'before_title' => '<h2>',
+            'after_title' => '</h2>',
+            'before_widget' => '<div class="second-footer-widget">',
+            'after_widget' => '</div>',
+            'name' => 'Second Footer Area',
+            'id' => 'footer-2',
+            'description' => ' Second Footer Widget Area'
+        )
+    );
+
+    register_sidebar(
+        array(
+            'before_title' => '<h2>',
+            'after_title' => '</h2>',
+            'before_widget' => '<div class="third-footer-widget">',
+            'after_widget' => '</div>',
+            'name' => 'Third Footer Area',
+            'id' => 'footer-3',
+            'description' => ' Third Footer Widget Area'
+        )
+
     );
 }
 

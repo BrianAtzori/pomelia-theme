@@ -123,11 +123,30 @@ nav a {
   padding: 50px;
   font-size: larger;
   line-height: 1.5;
+  color: #333;
 }
 
 /* FOOTER */
 
 .footer-section {
+  display: flex;
+  gap: 20px;
+  background-color: #fdaea5;
+  opacity: 0.95;
+  justify-content: space-around;
+  text-align: center;
+  height: fit-content;
+  flex-direction: column;
+  color: whitesmoke;
+  padding: 20px;
+  font-family: "DM Sans", sans-serif;
+  text-shadow: 1px 1px 2px #333;
+  font-weight: bold;
+  align-items: center;
+}
+
+.footer-section-text {
+  max-width: 25%;
   display: flex;
   gap: 10px;
   background-color: #fdaea5;
@@ -143,13 +162,21 @@ nav a {
   font-weight: bold;
 }
 
-.footer-section > a {
+.footer-section-text > a {
   color: whitesmoke;
 }
 
-.footer-section > a:hover,
-.footer-section > a:visited {
+.footer-section-text > a:hover,
+.footer-section-text > a:visited {
   color: whitesmoke;
+}
+
+.second-footer-widget {
+  max-width: 25%;
+}
+
+.third-footer-widget {
+  max-width: 25%;
 }
 
 /* Mobile */
@@ -188,6 +215,12 @@ nav a {
   .cta-button {
     width: 30vw;
   }
+  .footer-section {
+    flex-direction: row;
+  }
+  .first-footer-widget {
+    width: 0;
+  }
 }
 
 /* Desktop Styles */
@@ -206,6 +239,10 @@ nav a {
     width: 60%;
     margin: auto;
   }
+  .footer-section {
+    flex-direction: row;
+  }
+
 }
 
 @media only screen and (min-width: 1440px) {
@@ -218,6 +255,9 @@ nav a {
 
   .cta-button {
     width: 15vw;
+  }
+  .footer-section {
+    flex-direction: row;
   }
 }
 
