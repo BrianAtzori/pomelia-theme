@@ -206,12 +206,30 @@ nav a {
 
 /* Tablet Styles */
 @media only screen and (min-width: 451px) and (max-width: 960px) {
-  .logo-container {
-    visibility: visible;
-    background-color: whitesmoke;
-    border-radius: 100%;
-    height: fit-content;
+  
+  .menu-icon {
+    display: flex;
   }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 3vh;
+    left: 0;
+    background-color: #333;
+    width: 100%;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  nav li {
+    margin: 10px 0;
+  }
+
+
   .cta-button {
     width: 30vw;
   }
