@@ -25,6 +25,7 @@ add_action('wp_enqueue_scripts', 'forHotelsRegisterStyle');
 function forHotelsRegisterScripts()
 {
     wp_enqueue_script('for-hotels-script-main', get_template_directory_uri() . '/assets/js/main.js', array('jquery'), '1.0', true);
+    wp_enqueue_script('for-hotels-email-js', 'https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js', true);
 }
 
 add_action('wp_enqueue_scripts', 'forHotelsRegisterScripts');
