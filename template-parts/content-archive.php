@@ -8,8 +8,9 @@
                 <?php the_title(); ?>
             </h1>
             <div class="post-details">
-                <?php the_date(); ?> |
-                <?php comments_number(); ?>
+            🗓️ <?php echo get_the_date()?>
+            <?php the_tags('<p>🏷️ ', ', </p><p> 🏷️ ', '</p>') ?>
+                💬 <?php comments_number(); ?>
             </div>
         </header>
         <article>
