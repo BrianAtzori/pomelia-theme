@@ -5,34 +5,52 @@ get_header()
     ?>
 
 <?php
-if (have_posts()) {
-    while (have_posts()) {
-        the_post();
-        get_template_part('template-parts/content', 'page');
-    }
+if (has_post_thumbnail()) {
+    $post_thumbnail_id = get_post_thumbnail_id($post);
+    $featured_image = wp_get_attachment_image_src($post_thumbnail_id, 'full');
 }
 ?>
 
-<form id="contact-form" class="contact-form-container">
+<section class="hero"
+    style="background: url('<?php echo $featured_image[0]; ?>') no-repeat center center fixed; background-size:cover;">
+    <div class="hero-content">
+        <h1>
+            <?php the_title(); ?>
+        </h1>
+    </div>
 
-    <input type="hidden" name="contact_number">
+</section>
 
-    <label>Il tuo nome:</label>
+<div class="contacts-page">
 
-    <input type="text" name="user_name">
+    <div class="front-page-post">
+        <?php
+        the_content();
+        ?>
+    </div>
 
-    <label>La tua mail:</label>
+    <form id="contact-form" class="contact-form-container">
 
-    <input type="email" name="user_email">
+        <input type="hidden" name="contact_number">
 
-    <label>Il tuo messaggio:</label>
+        <label>Il tuo nome:</label>
 
-    <textarea name="message"></textarea>
+        <input type="text" name="user_name">
 
-    <input type="submit" value="Inviami una mail" class="send-button">
+        <label>La tua mail:</label>
 
-</form>
+        <input type="email" name="user_email">
 
-    <?php
-    get_footer();
-    ?>
+        <label>Il tuo messaggio:</label>
+
+        <textarea name="message" class="contacts-text-area" rows="20"></textarea>
+
+        <input type="submit" class="form-button" value="Contattaci" class="send-button">
+
+    </form>
+
+</div>
+
+<?php
+get_footer();
+?>
