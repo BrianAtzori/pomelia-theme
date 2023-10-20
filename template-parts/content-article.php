@@ -26,11 +26,15 @@ $categories = get_the_category();
         <?php comments_number(); ?>
         </p>
     </div>
-
 </section>
 
 <div class="front-page-post">
     <?php
     the_content();
+    ?>
+    <?php
+    if (comments_open() || get_comments_number()) {
+        comments_template();
+    }
     ?>
 </div>
