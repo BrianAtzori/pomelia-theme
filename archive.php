@@ -2,7 +2,7 @@
 get_header()
     ?>
 
-<div>
+<div style="height: 100vh;">
     <?php
     if (have_posts()) {
         while (have_posts()) {
