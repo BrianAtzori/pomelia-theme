@@ -15,15 +15,15 @@ $categories = get_the_category();
         <p>
             🗓️
             <?php echo get_the_date() ?>
-            <p> 
+        <p>
             <?php foreach ($categories as $category) {
-                echo $category->name; 
+                echo $category->name;
                 echo ' - ';
             } ?>
-            </p>
-            <?php the_tags('<p>🏷️ ', ' </p><p> 🏷️ ', '</p>') ?>
-            💬
-            <?php comments_number(); ?>
+        </p>
+        <?php the_tags('<p>🏷️ ', ' </p><p> 🏷️ ', '</p>') ?>
+        💬
+        <?php comments_number(); ?>
         </p>
     </div>
 

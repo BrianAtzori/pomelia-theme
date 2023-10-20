@@ -12,7 +12,6 @@ if (has_post_thumbnail()) {
             <?php the_title(); ?>
         </h1>
     </div>
-
 </section>
 
 <div class="front-page-post">
