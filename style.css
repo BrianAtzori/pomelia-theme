@@ -25,6 +25,10 @@ body {
   font-family: "DM Sans", sans-serif;
 }
 
+ol {
+  list-style: none;
+}
+
 /* MENU */
 
 .site-logo {
@@ -291,6 +295,72 @@ nav a {
   max-width: 30vh;
 }
 
+/* COMMENTS */
+.comments-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.comments-header {
+  font-size: medium;
+  background-color: #fdaea5;
+  color: whitesmoke;
+  text-shadow: 2px 2px 5px #333;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.comments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: fit-content;
+}
+
+.comments-list > li {
+  padding: 10px;
+  height: fit-content;
+  border: 1px dashed #c07f85;
+  border-radius: 10px;
+}
+
+.comment-reply-link {
+}
+
+.comment-form {
+  border-radius: 10px;
+  border: 5px solid #fdaea5;
+  padding: 20px;
+}
+
+.logged-in-as {
+  display: flex;
+  flex-direction: column;
+}
+
+.comment-form-comment {
+  /* padding: 20px; */
+  margin-top: 20px;
+}
+
+.comment-form-comment > textarea {
+  width: 96%;
+}
+
+.submit {
+  border: none;
+  font-weight: bold;
+  color: whitesmoke;
+  padding: 15px;
+  background-color: #c07f85;
+  border-radius: 0px 60px 60px 0;
+  font-size: medium;
+  font-family: "DM Sans", sans-serif;
+}
+
 /* Mobile */
 @media only screen and (max-width: 450px) {
   .menu-icon {
@@ -358,7 +428,7 @@ nav a {
   .second-footer-widget {
     max-width: 25%;
   }
-  
+
   .third-footer-widget {
     max-width: 25%;
   }
@@ -426,7 +496,7 @@ nav a {
   .second-footer-widget {
     max-width: 25%;
   }
-  
+
   .third-footer-widget {
     width: 25%;
   }
