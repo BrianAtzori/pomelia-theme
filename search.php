@@ -2,7 +2,7 @@
 get_header()
     ?>
 
-<section class="front-page-post">
+<section class="page-post">
     <?php
     if (have_posts()) {
         while (have_posts()) {

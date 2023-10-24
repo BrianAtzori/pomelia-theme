@@ -28,7 +28,7 @@ $categories = get_the_category();
     </div>
 </section>
 
-<div class="front-page-post">
+<div class="page-post">
     <?php
     the_content();
     ?>

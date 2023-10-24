@@ -23,10 +23,19 @@ body {
   background-color: whitesmoke;
   color: #333;
   font-family: "DM Sans", sans-serif;
+  scroll-behavior: smooth;
 }
 
 ol {
   list-style: none;
+}
+
+input:hover,
+a:hover,
+textarea:hover,
+button:hover {
+  transform: scale(1.1);
+  transition: all 0.8s ease-in-out;
 }
 
 /* MENU */
@@ -66,6 +75,10 @@ nav li {
   margin-right: 20px;
 }
 
+nav li > a:hover {
+  color: #c07f85;
+}
+
 nav a {
   text-decoration: none;
   color: #fff;
@@ -94,6 +107,18 @@ nav a {
   flex-direction: column;
   text-align: center;
   gap: 20px;
+  animation: fadeInAnimation ease 1.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .hero-content {
@@ -135,7 +160,7 @@ nav a {
 }
 
 /* FRONT-PAGE */
-.front-page-post {
+.page-post {
   padding: 50px;
   font-size: larger;
   line-height: 1.5;
@@ -474,7 +499,7 @@ nav a {
   .cta-button {
     width: 20vw;
   }
-  .front-page-post {
+  .page-post {
     padding: 100px;
     width: 60%;
     margin: auto;

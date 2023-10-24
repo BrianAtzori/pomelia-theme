@@ -26,7 +26,7 @@ if (has_post_thumbnail()) {
 
 </section>
 
-<section class="front-page-post">
+<section class="page-post">
     <?php
     if (have_posts()) {
         while (have_posts()) {

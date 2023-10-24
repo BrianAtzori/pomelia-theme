@@ -14,7 +14,7 @@ if (has_post_thumbnail()) {
     </div>
 </section>
 
-<div class="front-page-post">
+<div class="page-post">
     <?php
     the_content();
     ?>

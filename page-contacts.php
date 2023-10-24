@@ -23,7 +23,7 @@ if (has_post_thumbnail()) {
 
 <div class="contacts-page">
 
-    <div class="front-page-post">
+    <div class="page-post">
         <?php
         the_content();
         ?>
