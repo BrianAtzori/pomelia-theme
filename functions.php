@@ -17,7 +17,10 @@ add_action('after_setup_theme', 'forHotelsFirstSetup');
 
 function forHotelsRegisterStyle()
 {
-    wp_enqueue_style('for-hotels-style', get_template_directory_uri() . "/style.css", array(), '1.0', 'all');
+    wp_enqueue_style('for-hotels-style-general', get_template_directory_uri() . "/style.css", array(), '1.0', 'all');
+    wp_enqueue_style('for-hotels-style-main', get_template_directory_uri() . "/assets/styles/main.css", array(), '1.0', 'all');
+    wp_enqueue_style('for-hotels-style-blog', get_template_directory_uri() . "/assets/styles/blog.css", array(), '1.0', 'all');
+    wp_enqueue_style('for-hotels-style-contacts', get_template_directory_uri() . "/assets/styles/contacts.css", array(), '1.0', 'all');
 }
 
 add_action('wp_enqueue_scripts', 'forHotelsRegisterStyle');
